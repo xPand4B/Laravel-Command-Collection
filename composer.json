@@ -1,0 +1,42 @@
+{
+  "name": "xpand4b/laravel-command-collection",
+  "description": "A collection of useful artisan commands.",
+  "type": "library",
+  "keywords": [
+    "xpand4b",
+    "laravel",
+    "artisan",
+    "command"
+  ],
+  "homepage": "https://github.com/xPand4B/Laravel-Command-Collection",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Eric Heinzl",
+      "email": "xpand.4beatz@gmail.com",
+      "homepage": "https://xpand4b.de",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": "^7.4|^8.0",
+    "laravel/framework": "^8.68"
+  },
+  "autoload": {
+    "psr-4": {
+      "xPand4B\\CommandCollection\\": "src"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "xPand4B\\CommandCollection\\CommandCollectionServiceProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
