@@ -17,7 +17,7 @@ class InstallCommand extends Command
     {
         $this->runCommands([
             'php artisan down',
-            'php artisan key:generate --ansi',
+            'php artisan key:generate',
             'php artisan migrate:fresh --seed --force',
             'php artisan storage:link',
             'php artisan nova:publish',

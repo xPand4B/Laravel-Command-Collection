@@ -27,9 +27,9 @@ fi
 if [ "$shouldExit" = true ]; then
     echo ""
     echo -e "${red}Please enter your credentials inside the newly created files before continuing!${reset}"
+    exit;
 fi
 
-exit;
 
 # Run composer install
 # https://laravel.com/docs/8.x/sail#installing-composer-dependencies-for-existing-projects
