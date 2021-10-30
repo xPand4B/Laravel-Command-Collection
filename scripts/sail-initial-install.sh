@@ -44,7 +44,22 @@ docker run --rm \
 # Start sail
 #=====================================
 ./vendor/bin/sail up -d
+./vendor/bin/sail artisan down
+
+# Wait until container is started
+#=====================================
+echo ""
+echo -e "${green}Waiting for mysql container${reset}"
+
+MYSQL_CONTAINER="$(echo ${PWD##*/} | tr '[:upper:]' '[:lower:]')_mysql_1"
+while [ $(docker inspect --format "{{json .State.Health.Status }}" "$MYSQL_CONTAINER") != "\"healthy\"" ]; do
+    printf ".";
+    sleep 1;
+done
+echo ""
+echo ""
 
 # Install application
 #=====================================
 ./vendor/bin/sail artisan app:install
+./vendor/bin/sail artisan up

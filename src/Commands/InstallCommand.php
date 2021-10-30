@@ -16,17 +16,14 @@ class InstallCommand extends Command
     public function handle(): void
     {
         $this->runCommands([
-            'php artisan down',
             'php artisan key:generate',
             'php artisan migrate:fresh --seed --force',
             'php artisan storage:link',
-            'php artisan nova:publish',
             'php artisan route:cache',
             'php artisan config:cache',
             'php artisan event:cache',
             'npm install --production',
             'npm run prod',
-            'php artisan up',
         ]);
     }
 }
