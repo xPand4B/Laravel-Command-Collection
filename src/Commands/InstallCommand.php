@@ -19,6 +19,7 @@ class InstallCommand extends Command
             'php artisan key:generate',
             'php artisan migrate:fresh --seed --force',
             'php artisan storage:link',
+            'php artisan app:clear',
             'php artisan route:cache',
             'php artisan config:cache',
             'php artisan event:cache',

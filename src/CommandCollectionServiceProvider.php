@@ -3,6 +3,7 @@
 namespace xPand4B\CommandCollection;
 
 use Illuminate\Support\ServiceProvider;
+use xPand4B\CommandCollection\Commands\ClearCommand;
 use xPand4B\CommandCollection\Commands\InstallCommand;
 use xPand4B\CommandCollection\Commands\UpdateCommand;
 
@@ -44,6 +45,7 @@ class CommandCollectionServiceProvider extends ServiceProvider
         $this->commands([
             InstallCommand::class,
             UpdateCommand::class,
+            ClearCommand::class,
         ]);
     }
 }
