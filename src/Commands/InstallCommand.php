@@ -24,7 +24,7 @@ class InstallCommand extends Command
             'php artisan config:cache',
             'php artisan event:cache',
             'npm install',
-            'npm run prod',
+            'npm run dev',
         ]);
     }
 }

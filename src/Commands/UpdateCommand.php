@@ -26,7 +26,7 @@ class UpdateCommand extends Command
             'php artisan config:cache',
             'php artisan event:cache',
             'npm clean-install',
-            'npm run prod',
+            'npm run dev',
             'php artisan up',
         ]);
     }
